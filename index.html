@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://technext.github.io/lawncare/css/flaticon.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">     -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.min.css">
+    <style>
+        .text-green {
+            color: #4E9525;
+        }
+
+        .text-warning {
+            color: #FBD341 !important;
+        }
+
+        .bg-light {
+            background-color: #F2F2F2 !important;
+        }
+
+        .bg-green {
+            background-color: #4E9525;
+        }
+        .bg-dark-green {
+            background-color: #215701;
+        }
+
+        .fw-bolder {
+            font-weight: 900 !important;
+        }
+
+        /* navbar */
+        nav input[type="search"]:focus {
+            box-shadow: none;
+        }
+
+        nav .search {
+            padding: 12px 16px;
+            position: relative;
+            left: 2px;
+        }
+
+        nav .icon {
+            padding: 12px 16px;
+            background-color: #F2F2F2;
+            transition: all 0.3s ease;
+        }
+
+        nav .icon:hover {
+            color: white;
+            background-color: #4E9525;
+        }
+
+        .navbar .nav-link {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 14px;
+            font-weight: 600;
+            position: relative;
+            font-weight: bold;
+            padding: 1.5rem !important;
+        }
+
+        .nav-link.active {
+            color: #F0C029 !important;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 3px;
+            border-radius: 10px;
+            background-color: #fbd341;
+            transition: all 0.5s;
+        }
+
+        .nav-link:hover::before {
+            width: 100%;
+        }
+
+        .nav-link:hover {
+            color: #fbd341 !important;
+        }
+
+        section.vh-100 {
+            background: url('https://technext.github.io/lawncare/images/bg_1.jpg') no-repeat center / cover;
+            position: relative;
+        }
+
+        section .overlay {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        /* section two */
+
+        section.two .col-md-4 {
+            position: relative;
+        }
+
+        section.two h1.big-icons {
+            padding: 28px 32px;
+            background-color: #F2F2F2;
+            color: #4E9525;
+            transition: all 0.3s ease;
+        }
+
+        section.two a.bi-arrow-right {
+            position: absolute;
+            padding: 16px 20px;
+            bottom: -50px;
+            left: 45%;
+            opacity: 0;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        section.two .col-md-4:hover h1.big-icons {
+            color: #F0C029;
+            background-color: #4E9525;
+        }
+
+        section.two .col-md-4:hover a.bi-arrow-right {
+            opacity: 1;
+            bottom: -30px;
+        }
+
+        
+        section.two .btn.btn-lg:hover {
+            color: #4E9525 !important;
+        }
+
+        /* section three */
+        .three .video-icon {
+            top: 40%;
+            left: 45%;
+            font-size: 4rem;
+            padding: 0 17px;
+            animation: video 2s infinite;
+        }
+        @keyframes video {
+            0% {
+                box-shadow: 0 0 0 0 rgba(1, 145, 23, 0.5);
+            }
+
+            100% {
+                box-shadow: 0 0 0 30px rgba(36, 252, 68, 0.0);
+            }
+        }
+
+        .three .img{
+            height: 100%;
+        }
+        .three i.bi-arrow-right{
+            right: -10px;
+            padding: 16px 20px;
+            background-color: #4E9525;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .three .service-list{            
+            background-color: white;
+            color: black;
+            padding: 20px 30px;
+            transition: all 0.3s ease;
+        }
+        .three .service-list:hover{
+            color: white;
+            background-color: #4E9525;
+        }
+        .three .service-list:hover i.bi-arrow-right{
+            color: #4E9525;
+            background-color: #F0C029;
+        }
+
+        @media(min-width: 992px) {
+            .container {
+                padding-left: 6rem;
+                padding-right: 6rem;
+            }
+
+            .bg-md-green {
+                background-color: #4E9525;
+            }
+
+            section.two a.bi-arrow-right {
+                left: 41%;
+            }
+
+            section.vh-100 {
+                background: url('https://technext.github.io/lawncare/images/bg_1.jpg') no-repeat center / cover;
+                background-attachment: fixed;
+                position: relative;
+            }
+            .three i.bi-arrow-right{
+                right: -30px;
+            }
+        }
+
+        @media(max-width: 992px) {
+            .navbar {
+                background-color: black;
+            }
+
+            .navbar .nav-link {
+                border-bottom: 1px solid grey;
+                padding: 0.8rem 0 !important;
+            }
+
+            .nav-link::before {
+                content: '';
+                height: 2px;
+            }
+
+            .three .img{
+                height: 50vh;
+                width: 100%;
+            }
+
+            .three .video-icon {
+                top: 10%;
+                left: 38%;
+            }
+        }
+        .wrap{
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        .wrap .seasonal{
+            height: 300px;
+            border-radius: 4px;
+            position: relative;
+            box-shadow: 0px 5px 21px -14px rgb(0 0 0 / 14%);
+        }
+        .text{
+            font-size: 18px;
+            letter-spacing: 0.5px;
+        }
+        .season .owl-theme .owl-dots .owl-dot.active span,.season .owl-theme .owl-dots .owl-dot:hover span
+        {
+            background-color: rgb(158, 158, 158);
+            box-shadow: 0 0 5px 2px rgb(158, 158, 158);
+        }
+        .testimonial .owl-theme .owl-dots .owl-dot.active span,.testimonial .owl-theme .owl-dots .owl-dot:hover span
+        {
+            background-color: #4E9525;
+        }
+        .testimonial .owl-theme .owl-dots .owl-dot span
+        {
+            width: 11px;
+            height: 11px;
+        }
+        .testimonial .user-img{
+            width: 80px;
+            height: 80px;
+        }
+
+        .blog-img {
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 270px;
+        }
+        .blogs .text{
+            position: relative;
+        }
+        .blogs .text .heading{
+            color: black;
+        }
+        .blogs .text .heading:hover{
+            color: #215701;
+        }
+        .blogs .text .topper{
+            position: absolute;
+            top: -63px;
+        }
+        .blogs .text .topper::after{
+            content: '';
+            width: 15px;
+            height: 15px;
+            background-color: #4E9525;
+            transform: rotate(45deg);
+            position: absolute;
+            bottom: -8px;
+            left: 40px;
+        }
+        footer .icon-link .bi{
+            color: white;
+            font-size: 24px;
+        }
+        footer .service-link{
+            color: white;
+            line-height: 2;
+            transition: all 0.3s ease;
+        }
+        footer .service-link span:not(:first-child){
+            font-size: 18px;
+            padding-left: 10px;
+        }
+        
+        footer .bi:hover,
+        .service-link:hover{
+            color: #4E9525;
+        }
+        footer .icon-link{
+            padding: 18px;
+            background-color: rgba(33, 37, 41, 1);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>  
+    <nav class="py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center">
+                    <h2 class="fw-bolder">Lawn<span class="text-green">Care</span></h2>
+                </div>
+                <div class="col-md-3 order-md-last my-3 my-md-0">
+                    <div class="input-group rounded-5 bg-light">
+                        <input type="search" class="form-control ps-3 rounded-5 border-0 bg-light"
+                            placeholder="Search" />
+                        <button type="submit" class="input-group-text search rounded-circle border-0 bg-green">
+                            <i class="bi bi-search text-white"></i>
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="col-md-3 order-md-first justify-content-md-start justify-content-center d-flex text-black-50">
+                    <div class="icon me-1 rounded-circle">
+                        <i class="bi bi-facebook"></i>
+                    </div>
+                    <div class="icon me-1 rounded-circle">
+                        <i class="bi bi-twitter"></i>
+                    </div>
+                    <div class="icon me-1 rounded-circle">
+                        <i class="bi bi-instagram"></i>
+                    </div>
+                    <div class="icon rounded-circle">
+                        <i class="bi bi-dribbble"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg p-0 bg-md-green">
+        <div class="container">
+            <button class="navbar-toggler text-white-50" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbar1">
+                <div class="fs-5 d-lg-none d-flex align-items-center">
+                    <i class="bi bi-list fs-2"></i>&nbsp;MENU
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar1">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white mb-2 mb-lg-0" href="#">contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- main section -->
+    <section class="vh-100">
+        <div class="overlay"></div>
+        <div class="container h-100 position-relative">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-5 col-md-8 text-white" data-aos="fade-up">
+                    <h6 class="fw-bolder text-warning">WELCOME TO LAWN CARE</h6>
+                    <h1 class="fw-bolder display-3">Lawn care for everyone</h1>
+                    <h5 class="text-white-50">Let us work on your yard</h5>
+                    <button class="btn btn-lg mt-3 bg-green text-white">Learn more<span
+                            class="bi bi-chevron-right"></span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- column section -->
+    <section class="two py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-12">
+                    <div class="row pt-md-3 pb-5 mb-3">
+                        <div class="col-md-4 mb-4 mb-md-0">
+                            <div class="shadow p-3 px-5 text-center h-100">
+                                <div class="d-flex justify-content-center">
+                                    <h1 class="display-6 fw-bold big-icons rounded-circle">
+                                        <i class="flaticon-fence"></i>
+                                    </h1>
+                                </div>
+                                <h5 class="fw-bold">Garden Care</h5>
+                                <p class="lead fw-normal opacity-75">
+                                    Seeking justice in the world is a sed significant emotional and investment when we
+                                    follow this call.
+                                </p>
+                                <a href="#"
+                                    class="bi bi-arrow-right text-decoration-none bg-green text-white rounded-circle"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4 mb-md-0">
+                            <div class="shadow p-3 px-5 text-center h-100">
+                                <div class="d-flex justify-content-center">
+                                    <h1 class="display-6 fw-bold big-icons rounded-circle">
+                                        <i class="flaticon-lawn-mower"></i>
+                                    </h1>
+                                </div>
+                                <h5 class="fw-bold">Lawn mowing</h5>
+                                <p class="lead fw-normal opacity-75">
+                                    Seeking justice in the world is a sed significant emotional and investment when we
+                                    follow this call.
+                                </p>
+                                <a href="#"
+                                    class="bi bi-arrow-right text-decoration-none bg-green text-white rounded-circle"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="shadow p-3 px-5 text-center h-100">
+                                <div class="d-flex justify-content-center">
+                                    <h1 class="display-6 fw-bold big-icons rounded-circle">
+                                        <i class="flaticon-natural-resources"></i>
+                                    </h1>
+                                </div>
+                                <h5 class="fw-bold">Lawn care</h5>
+                                <p class="lead fw-normal opacity-75">
+                                    Seeking justice in the world is a sed significant emotional and investment when we
+                                    follow this call.
+                                </p>
+                                <a href="#"
+                                    class="bi bi-arrow-right text-decoration-none bg-green text-white rounded-circle"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3" data-aos="fade-up">
+                    <h5 class="fw-bolder text-green">Services</h5>
+                    <h2 class="fw-bolder">Lawn Services</h2>
+                    <p class="lead fw-normal opacity-75">A small river named Duden flows by their place and supplies it
+                        with the necessary regelialia. It is a paradisematic country, in which roasted parts of
+                        sentences fly into your.</p>
+                    <button class="btn btn-lg bg-green text-white">Get a Quote</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- video section -->
+    <section class="three bg-light">
+        <div class="container">
+            <div class="row position-relative">
+                <div class="col-lg-6">
+                    <div class="img"
+                        style="background: url('https://technext.github.io/lawncare/images/about.jpg') no-repeat center / cover;">
+                    </div>
+                    <a href="https://vimeo.com/45830194"
+                        class="video-icon position-absolute text-white bg-green rounded-circle" target="_blank">
+                        <i class="bi bi-play-fill"></i>
+                    </a>
+                </div>
+                <div class="col-lg-6 p-lg-5 p-3" data-aos="fade-up">
+                    <h6 class="h5 fw-bolder text-green">Welcome to Lawn Care</h6>
+                    <h2 class="fw-bold lh-sm">Welcome to Lawn Care Company</h2>
+                    <p class="lead text-muted fw-normal mt-4">Far far away, behind the word mountains, far from the
+                        countries Vokalia and Consonantia</p>
+                    <div class="w-100 mb-lg-5">
+                        <a href="#" class="position-relative service-list text-decoration-none shadow rounded-2 d-flex align-items-center fw-semibold mb-3" style="font-size: 18px;">Gutter cleaning
+                            <i class="position-absolute bi bi-arrow-right text-decoration-none  rounded-circle"></i>
+                        </a>
+                        <a href="#" class="position-relative service-list text-decoration-none shadow rounded-2 d-flex align-items-center fw-semibold mb-3" style="font-size: 18px;">Organinc fertilization and weed control
+                            <i class="position-absolute bi bi-arrow-right text-decoration-none  rounded-circle"></i>
+                        </a>
+                        <a href="#" class="position-relative service-list text-decoration-none shadow rounded-2 d-flex align-items-center fw-semibold mb-3" style="font-size: 18px;">Compost top dressing & compost tea application
+                            <i class="position-absolute bi bi-arrow-right text-decoration-none  rounded-circle"></i>
+                        </a>
+                        <a href="#" class="position-relative service-list text-decoration-none shadow rounded-2 d-flex align-items-center fw-semibold mb-3" style="font-size: 18px;">New lawn installation
+                            <i class="position-absolute bi bi-arrow-right text-decoration-none  rounded-circle"></i>
+                        </a>
+                        <a href="#" class="position-relative service-list text-decoration-none shadow rounded-2 d-flex align-items-center fw-semibold" style="font-size: 18px;">Mulch and other services available
+                            <i class="position-absolute bi bi-arrow-right text-decoration-none  rounded-circle"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Season carousel section -->
+    <section class="season py-5">
+        <div class="container py-5 mt-2">
+            <div class="row justify-content-center" data-aos="fade-up">
+                <div class="col-12 text-center">
+                    <h6 class="fw-bolder text-green">Tips & Techniques</h6>
+                    <h2 class="fw-bold">Seasonal Lawn Care</h2>
+                </div>
+            </div>
+            <div class="row pt-5 mt-3">
+                <div class="col-md-12">
+                    <div class="owl-carousel owl-theme owl-loaded">
+                        <div class="owl-stage-outer">
+                            <div class="owl-stage">
+                                <div class="owl-item px-md-0">
+                                    <div class="item">
+                                        <div class="wrap border-0 h-100 w-100">
+                                            <div class="seasonal img d-flex align-items-center justify-content-center" style="background: url('https://technext.github.io/lawncare/images/seasonal-4.jpg') no-repeat center / cover;"></div>
+                                            <div class="text-center px-4 py-3">
+                                                <h3>
+                                                    <a href="#" class="text-decoration-none text-black">Fall</a>
+                                                </h3>
+                                                <p class="text lead fw-normal text-muted">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="owl-item px-md-0">
+                                    <div class="item">
+                                        <div class="wrap border-0 h-100 w-100">
+                                            <div class="seasonal img d-flex align-items-center justify-content-center" style="background: url('https://technext.github.io/lawncare/images/seasonal-1.jpg') no-repeat center / cover;"></div>
+                                            <div class="text-center px-4 py-3">
+                                                <h3>
+                                                    <a href="#" class="text-decoration-none text-black">Spring</a>
+                                                </h3>
+                                                <p class="text lead fw-normal text-muted">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="owl-item px-md-0">
+                                    <div class="item">
+                                        <div class="wrap border-0 h-100 w-100">
+                                            <div class="seasonal img d-flex align-items-center justify-content-center" style="background: url('https://technext.github.io/lawncare/images/seasonal-2.jpg') no-repeat center / cover;"></div>
+                                            <div class="text-center px-4 py-3">
+                                                <h3>
+                                                    <a href="#" class="text-decoration-none text-black">Summer</a>
+                                                </h3>
+                                                <p class="text lead fw-normal text-muted">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="item">
+                                        <div class="wrap border-0 h-100 w-100">
+                                            <div class="seasonal img d-flex align-items-center justify-content-center" style="background: url('https://technext.github.io/lawncare/images/seasonal-3.jpg') no-repeat center / cover;"></div>
+                                            <div class="text-center px-4 py-3">
+                                                <h3>
+                                                    <a href="#" class="text-decoration-none text-black">Winter</a>
+                                                </h3>
+                                                <p class="text lead fw-normal text-muted">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--contact section  -->
+    <section class="py-5 bg-green">
+        <div class="container">
+            <div class="row text-white align-items-center">
+                <div class="col-lg-6 mb-lg-0 mb-3">
+                    <h2 class="h1 fw-bolder">Contact with us</h2>
+                    <p class="lead fw-normal">Do you have any comments or questions about the products then contact us.</p>
+                </div>
+                <div class="col-lg-6">
+                    <h1 class="text-warning text-lg-end">+00(123) 456-78-09</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- testimonials -->
+    <section class="testimonial py-5">
+        <div class="container py-5 my-4 mb-5">
+            <div class="row justify-content-center" data-aos="fade-up">
+                <div class="col-12 text-center">
+                    <h6 class="fw-bolder text-green">Testimonial</h6>
+                    <h2 class="fw-bold">Happy Clients</h2>
+                </div>
+            </div>
+            <div class="row pt-5 mt-5">
+                <div class="owl-carousel owl-theme owl-loaded">
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage pb-4">
+                            <div class="owl-item px-4 px-md-0" data-aos="fade-up">
+                                <div class="card m-1 shadow border-0">
+                                    <div class="testimonial-wrap py-4 px-3">
+                                        <div class="card-text">
+                                            <p class="text fw-normal text-muted mb-4">
+                                                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+                                            </p>
+                                        </div>
+                                        <div class="d-flex gap-3 align-items-center">
+                                            <div class="user-img rounded-circle" style="background: url('https://technext.github.io/lawncare/images/person_2.jpg') no-repeat center / cover;"></div>
+                                            <div>
+                                                <p class="h4 card-title">Roger Scott</p>
+                                                <div class="text text-green">Marketing Manager</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item px-4 px-md-0" data-aos="fade-up">
+                                <div class="card m-1 shadow border-0">
+                                    <div class="testimonial-wrap py-4 px-3">
+                                        <div class="card-text">
+                                            <p class="text fw-normal text-muted mb-4">
+                                                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+                                            </p>
+                                        </div>
+                                        <div class="d-flex gap-3 align-items-center">
+                                            <div class="user-img rounded-circle" style="background: url('https://technext.github.io/lawncare/images/person_1.jpg') no-repeat center / cover;"></div>
+                                            <div>
+                                                <p class="h4 card-title">Roger Scott</p>
+                                                <div class="text text-green">Marketing Manager</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item px-4 px-md-0" data-aos="fade-up">
+                                <div class="card m-1 shadow border-0">
+                                    <div class="testimonial-wrap py-4 px-3">
+                                        <div class="card-text">
+                                            <p class="text fw-normal text-muted mb-4">
+                                                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+                                            </p>
+                                        </div>
+                                        <div class="d-flex gap-3 align-items-center">
+                                            <div class="user-img rounded-circle" style="background: url('https://technext.github.io/lawncare/images/person_2.jpg') no-repeat center / cover;"></div>
+                                            <div>
+                                                <p class="h4 card-title">Roger Scott</p>
+                                                <div class="text text-green">Marketing Manager</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item px-4 px-md-0" data-aos="fade-up">
+                                <div class="card m-1 shadow border-0">
+                                    <div class="testimonial-wrap py-4 px-3">
+                                        <div class="card-text">
+                                            <p class="text fw-normal text-muted mb-4">
+                                                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+                                            </p>
+                                        </div>
+                                        <div class="d-flex gap-3 align-items-center">
+                                            <div class="user-img rounded-circle" style="background: url('https://technext.github.io/lawncare/images/person_3.jpg') no-repeat center / cover;"></div>
+                                            <div>
+                                                <p class="h4 card-title">Roger Scott</p>
+                                                <div class="text text-green">Marketing Manager</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item px-4 px-md-0" data-aos="fade-up">
+                                <div class="card m-1 shadow border-0">
+                                    <div class="testimonial-wrap py-4 px-3">
+                                        <div class="card-text">
+                                            <p class="text fw-normal text-muted mb-4">
+                                                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+                                            </p>
+                                        </div>
+                                        <div class="d-flex gap-3 align-items-center">
+                                            <div class="user-img rounded-circle" style="background: url('https://technext.github.io/lawncare/images/person_1.jpg') no-repeat center / cover;"></div>
+                                            <div>
+                                                <p class="h4 card-title">Roger Scott</p>
+                                                <div class="text text-green">Marketing Manager</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- blog section -->
+    <section class="blogs bg-light py-5">
+        <div class="container py-5 my-4">
+            <div class="row justify-content-center" data-aos="fade-up">
+                <div class="col-12 text-center">
+                    <h6 class="fw-bolder text-green">Our Blog</h6>
+                    <h2 class="fw-bold">Recent Blog</h2>
+                </div>
+            </div>
+            <div class="row pt-5 mt-4">
+                <div class="col-md-4 mb-md-0 mb-3">
+                    <div class="blog-box">
+                        <a href="#" class="blog-img text-decoration-none" style="background: url('https://technext.github.io/lawncare/images/image_1.jpg') no-repeat center / cover;"></a>
+                        <div class="text p-4 bg-white">
+                            <div class="topper bg-green d-flex align-items-center">
+                                <div class="one py-1 ps-3 pe-2">
+                                    <h1 class="display-6 fw-normal text-white day">24</h1>
+                                </div>
+                                <div class="text-white-50 ps-0 pe-3 py-1 two">
+                                    <div>2020</div>
+                                    <div>January</div>
+                                </div>
+                            </div>
+                            <h5>
+                                <a href="#" class="heading text-decoration-none">All you want to know about industrial laws</a>
+                            </h5>
+                            <p class="text fw-normal text-muted">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                            <a href="#" class="btn bg-green text-white">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-md-0 mb-3">
+                    <div class="blog-box">
+                        <a href="#" class="blog-img text-decoration-none" style="background: url('https://technext.github.io/lawncare/images/image_2.jpg') no-repeat center / cover;"></a>
+                        <div class="text p-4 bg-white">
+                            <div class="topper bg-green d-flex align-items-center">
+                                <div class="one py-1 ps-3 pe-2">
+                                    <h1 class="display-6 fw-normal text-white day">24</h1>
+                                </div>
+                                <div class="text-white-50 ps-0 pe-3 py-1 two">
+                                    <div>2020</div>
+                                    <div>January</div>
+                                </div>
+                            </div>
+                            <h5>
+                                <a href="#" class="heading text-decoration-none">All you want to know about industrial laws</a>
+                            </h5>
+                            <p class="text fw-normal text-muted">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                            <a href="#" class="btn bg-green text-white">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="blog-box">
+                        <a href="#" class="blog-img text-decoration-none" style="background: url('https://technext.github.io/lawncare/images/image_3.jpg') no-repeat center / cover;"></a>
+                        <div class="text p-4 bg-white">
+                            <div class="topper bg-green d-flex align-items-center">
+                                <div class="one py-1 ps-3 pe-2">
+                                    <h1 class="display-6 fw-normal text-white day">24</h1>
+                                </div>
+                                <div class="text-white-50 ps-0 pe-3 py-1 two">
+                                    <div>2020</div>
+                                    <div>January</div>
+                                </div>
+                            </div>
+                            <h5>
+                                <a href="#" class="heading text-decoration-none">All you want to know about industrial laws</a>
+                            </h5>
+                            <p class="text fw-normal text-muted">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                            <a href="#" class="btn bg-green text-white">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- subscrobe section -->
+    <section class="subscribe bg-green py-4">
+        <div class="container">
+            <div class="row text-white align-items-center">
+                <div class="col-md-6 me-lg-5 text-lg-end">
+                    <h3 class="fw-semibold">Subcribe to our Newsletter</h3>
+                </div>
+                <div class="col-lg-4 col-md-6 text-lg-start">
+                    <div class="input-group">
+                        <input type="email" class="text-black form-control" placeholder="Enter email address">
+                        <input type="submit" class="input-group-text text-white border-0 py-3 bg-dark-green" value="Subscribe">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-black py-5">
+        <div class="container text-white">
+            <div class="row align-items-start mb-5">
+                <div class="col-lg-3 col-md-6 mb-lg-0 mb-md-3 mb-3">
+                    <h1 class="fw-bolder">
+                        <a href="#" class="text-decoration-none text-white">LAWN <span class="text-green">CARE</span></a>
+                    </h1>
+                    <p class="text-white-50 text my-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <ul class="list-unstyled d-flex gap-2 mt-5">
+                        <li data-aos="fade-up">
+                            <a href="#" class="icon-link text-decoration-none">
+                                <span class="bi bi-twitter"></span>
+                            </a>
+                        </li>
+                        <li data-aos="fade-up">
+                            <a href="#" class="icon-link text-decoration-none">
+                                <span class="bi bi-facebook"></span>
+                            </a>
+                        </li>
+                        <li data-aos="fade-up">
+                            <a href="#" class="icon-link text-decoration-none">
+                                <span class="bi bi-instagram"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 ps-4 mb-lg-0 mb-md-3 mb-3">
+                    <h5 class="py-2 pt-3 mb-4">Services</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#" class="service-link text-decoration-none">
+                                <span class="bi bi-chevron-right"></span>
+                                <span>Garden Care</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="service-link text-decoration-none">
+                                <span class="bi bi-chevron-right"></span>
+                                <span>Lawn mowing</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="service-link text-decoration-none">
+                                <span class="bi bi-chevron-right"></span>
+                                <span>Lawn Care</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="service-link text-decoration-none">
+                                <span class="bi bi-chevron-right"></span>
+                                <span>Gutter Cleaning</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="service-link text-decoration-none">
+                                <span class="bi bi-chevron-right"></span>
+                                <span>New Lawn installation</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 ps-4 mb-lg-0 mb-3">
+                    <h5 class="py-2 pt-3 mb-4">Contact information</h5>
+                    <ul class="list-unstyled text-light ">
+                        <li class="text mb-2">
+                            <span class="bi bi-geo-alt-fill"></span><span class="ps-2 text-start text-white-50">    203 Fake St. Mountain View, San Francisco, California, USA</span>
+                        </li>
+                        <li class="text my-2">
+                            <a href="#" class="text-decoration-none service-link">
+                                <span class="bi bi-telephone-fill"></span>
+                                <span class="ps-2">+2 392 3929 210</span>
+                            </a>
+                        </li>
+                        <li class="text my-2">
+                            <a href="#" class="text-decoration-none service-link">
+                                <span class="bi bi-envelope-fill"></span>
+                                <span class="ps-2">	info@yourdomain.com</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 ps-3">
+                    <h5 class="py-2 pt-3 mb-4">Business Hours</h5>
+                    <div class="opening-hours">
+                        <p class="text-warning text">Opening Days:</p>
+                        <p class="ps-3 text fw-light">
+                            Monday - Friday : 9am to 20pm Saturday : 9am to 17pm
+                        </p>
+                        <p class="text-warning text">Vacations:</p>
+                        <p class="ps-3 text fw-light">
+                            All Sunday Days All Official Holidays
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 text-center text-white-50">
+                    <span class="text">
+                        Copyright &copy;2022 All rights reserved | This template is made with &hearts; by Colorlib
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+        });
+
+        let seasonSlider = $('.season .owl-carousel');
+        seasonSlider.owlCarousel({
+            margin: 30,
+            loop: true,
+            dotsEach: true,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                600: {
+                    items: 1,
+                    stagePadding: 100,
+                },
+                1000: {
+                    items: 3,
+                }
+            }
+        })
+        
+        let testimonials = $('.testimonial .owl-carousel');
+        testimonials.owlCarousel({
+            margin: 30,
+            loop: true,
+            dotsEach: true,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                600: {
+                    items: 1,
+                    stagePadding: 100,
+                },
+                1000: {
+                    items: 3,
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
